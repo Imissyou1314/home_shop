@@ -10,6 +10,7 @@
     "context/param",
     "grace",
     "logs",
+    "orm",
     "session",
     "toolbox",
     "utils"
@@ -52,6 +53,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "9e242ef2da883faa526d0301106c1de8202a8b14eecebf2470863a2e60ea195b"
+  inputs-digest = "139775d19a44223531c452429fcb3f00aea5dd970dd4588d66636fdfe86eb29b"
   solver-name = "gps-cdcl"
   solver-version = 1

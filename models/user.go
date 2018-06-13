@@ -72,8 +72,7 @@ func genPassword(rawPassowrd string, salt string) string {
 
 //check user password
 func (user *User) CheckPassword(rawPassword string) bool {
-	password := genPassword(
-		rawPassword, user.Salt)
+	password := genPassword(rawPassword, user.Salt)
 
 	return password == user.Password
 }
