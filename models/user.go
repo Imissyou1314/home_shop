@@ -11,15 +11,15 @@ import  (
 )
 
 type User struct {
-	Id     int    `orm:"auto"`
-	Name   string `orm:"size(100)"`
-	Gender string `orm:"size(10)"`
-	Phone  string `orm:"size(32)"`
-	Email  string `orm:"size(32)"`
-	Address string `orm:"size(64)"`
-	Uuid string `orm:"size(128)"`
-	Password string `orm:"size(128)"`
-	Salt string `orm:"size(6)"`
+	Id     		int    `orm:"auto"`
+	Name   		string `orm:"size(100)"`
+	Gender 		string `orm:"size(10)"`
+	Phone  		string `orm:"size(32)"`
+	Email  		string `orm:"size(32)"`
+	Address 	string `orm:"size(64)"`
+	Uuid 		string `orm:"size(128)"`
+	Password 	string `orm:"size(128)"`
+	Salt 		string `orm:"size(6)"`
 }
 
 
