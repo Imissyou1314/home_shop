@@ -23,4 +23,5 @@ gen### Go template
 .idea/
 README.md
 conf/app.conf
+conf/
 vendor/
