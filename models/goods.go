@@ -12,7 +12,7 @@ const (
 )
 
 type Goods struct {
-	Id					int				`orm:"auto"`			// ID
+	Id					int64			`orm:"auto"`			// ID
 	Name				string			`orm:"size(50)"`		// 商品名
 	Desc 				string			`orm:"size(50)"`		// 商品简介
 	DescLink 			string 		`orm:"size(30)"`			// 商定链接

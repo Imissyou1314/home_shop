@@ -1,20 +1,21 @@
 package service
 
 import (
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/astaxie/beego/orm"
 	"github.com/astaxie/beego"
 	"os"
 	"home_shop/models"
+	"github.com/astaxie/beego/logs"
 )
 
 var (
-	o				orm.Ormer
-	tablePrefix		string
-	UserService		*userService
-	GoodsService	*goodsService
-	ShopService 	*shopService
-	OrderService	*orderService
-
+	o            orm.Ormer
+	tablePrefix  string
+	UserService  *userService
+	GoodsService *goodsService
+	ShopService  *shopService
+	OrderService *orderService
 )
 
 func init() {
@@ -31,7 +32,7 @@ func init() {
 	orm.RegisterDataBase("default", "mysql", dsn)
 
 	orm.RegisterModelWithPrefix(tablePrefix,
-		new (models.User),
+		new(models.User),
 		new(models.Goods),
 		new(models.Order),
 		new(models.Shop),
@@ -57,3 +58,12 @@ func initService() {
 	OrderService = &orderService{}
 	ShopService = &shopService{}
 }
+
+func CheckErr(err error) bool{
+	if nil != err {
+		logs.Error(err)
+		return false
+	}
+	return true
+}
+

@@ -17,15 +17,15 @@ const (
 )
 
 type Order struct {
-	Id 				int
-	ShopId			int
-	UserId          int
-	ShopNumber		int64			`orm:"default(0)"`
-	Price			int64			`orm:"default(0)"`
-	Desc 			string			`orm:"size(60);null"`
-	CreateTime 		time.Time		`orm:"auto_now_add;type(datetime)"`
-	EndTime			time.Time       `orm:"type(datetime);null"`
-	State			int				`orm:"default(1)"`
+	Id 				int64
+	ShopId			int														// 商店关联ID
+	UserId          int														// 用户关联iD
+	ShopNumber		int64			`orm:"default(0)"`						// 商品数量
+	Price			int64			`orm:"default(0)"`						// 商品价格
+	Desc 			string			`orm:"size(60);null"`					// 购买说明
+	CreateTime 		time.Time		`orm:"auto_now_add;type(datetime)"`		// 购买时间
+	EndTime			time.Time       `orm:"type(datetime);null"`				// 订单结束时间
+	State			int				`orm:"default(1)"`						// 订单状态
 
 	MailCode		string			`orm:"size(15);null"`					// 邮件码
 	MailType		string 			`orm:"size(19);null"`					// 邮件类型
