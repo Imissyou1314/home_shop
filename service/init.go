@@ -7,6 +7,7 @@ import (
 	"os"
 	"home_shop/models"
 	"github.com/astaxie/beego/logs"
+	"fmt"
 )
 
 var (
@@ -65,5 +66,10 @@ func CheckErr(err error) bool{
 		return false
 	}
 	return true
+}
+
+// New Error 生成异常
+func NewErr(errMsg string) error {
+	return fmt.Errorf("Error Msg: %s", errMsg)
 }
 
